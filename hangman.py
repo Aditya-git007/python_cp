@@ -12,17 +12,13 @@ COL_BG = (15,15,25)
 COL_GALLOWS = (200,200,200)
 COL_BODY = (230,230,230)
 COL_TEXT = (240,240,240)
-COL_LETTER_BOX  = (40,40,60)
+COL_LETTER_BOX = (40,40,60)
 COL_CORRECT = (80,200,120)
 COL_WRONG = (220,60,60)
 COL_HINT = (160,160,200)
 COL_WIN_TEXT = (80,220,120)
 COL_LOSE_TEXT = (220,60,60)
 COL_OVERLAY = (0,0,0,160)   # RGBA -- used on end screen
-
-FONT_WORD = None
-FONT_ALPHA = None
-FONT_UI = None
 
 FONT_WORD_SIZE = 42
 FONT_ALPHA_SIZE = 28
@@ -209,10 +205,10 @@ def main():
     clock = pygame.time.Clock()
 
     # fonts
-    font_word = pygame.font.SysFont(FONT_WORD,FONT_WORD_SIZE,bold=True)
-    font_alpha = pygame.font.SysFont(FONT_ALPHA, FONT_ALPHA_SIZE)
-    font_ui = pygame.font.SysFont(FONT_UI,FONT_UI_SIZE)
-    font_big = pygame.font.SysFont(FONT_UI,48, bold=True)
+    font_word = pygame.font.SysFont(None, FONT_WORD_SIZE, bold=True)
+    font_alpha = pygame.font.SysFont(None, FONT_ALPHA_SIZE)
+    font_ui = pygame.font.SysFont(None, FONT_UI_SIZE)
+    font_big = pygame.font.SysFont(None, 48, bold=True)
 
     game = HangmanGame()
 
