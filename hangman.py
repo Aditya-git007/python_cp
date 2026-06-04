@@ -107,10 +107,10 @@ def all_guessed(word, guessed):
 def draw_word_display(surface, display_chars, font, y_center):
     spacing = 38
     total_w = len(display_chars) * spacing
-    start_x = (WINDOW_WIDTH - total_w) // 2
+    x_start = (WINDOW_WIDTH - total_w) // 2
 
     for i, ch in enumerate(display_chars):
-        x = start_x + i * spacing
+        x = x_start + i * spacing
         color = COL_CORRECT if ch != "_" else COL_TEXT
         letter_surf = font.render(ch, True, color)
         surface.blit(letter_surf, (x, y_center))
@@ -127,12 +127,12 @@ def draw_alphabet(surface, guessed, word, font, y_start):
     box_w, box_h = 44, 38
     gap = 6
     total_w  = cols * (box_w + gap) - gap
-    start_x  = (WINDOW_WIDTH - total_w) // 2
+    x_start  = (WINDOW_WIDTH - total_w) // 2
 
     for i, letter in enumerate(alphabet):
         col_idx = i % cols
         row_idx = i // cols
-        x = start_x + col_idx * (box_w + gap)
+        x = x_start + col_idx * (box_w + gap)
         y = y_start + row_idx * (box_h + gap)
 
         if letter in guessed:
